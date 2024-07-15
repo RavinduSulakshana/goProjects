@@ -11,7 +11,6 @@ func bucketSort(arr []int)[]int{
 	}
 
 	buckets := make([][]int,maxVal+1)
-
 	for i := range buckets {
 		buckets[i]=make([]int,0)
 	}
@@ -21,7 +20,6 @@ func bucketSort(arr []int)[]int{
 	}
 
 	result := make([]int,0)
-
 	for _, bucket:= range buckets {
 		result = append(result,bucket...)
 	}
@@ -30,7 +28,7 @@ func bucketSort(arr []int)[]int{
 
 }
 func main() {
-arr := []int{67, 32, 12, 54, 43, 57}
+arr := []int{67, 32, 54, 12, 54, 43, 57}
 fmt.Println("The given unsorted array is:", arr)
 sortedArr := bucketSort(arr)
 fmt.Println("The obtained sorted array is:", sortedArr)
